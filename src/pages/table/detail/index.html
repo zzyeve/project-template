@@ -1,0 +1,42 @@
+<div class="page">
+    <FlexTable :page.sync="page" :size.sync="size" :total="total" @change="tableList">
+        <FormFilter :formFilter.sync="form">
+            <template slot="form">
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+                <el-form-item label="手机号">
+                    <el-input></el-input>
+                </el-form-item>
+            </template>
+        </FormFilter>
+        <template #table="scope">
+            <el-table
+                v-loading="loading"
+                :data="dataList"
+                :height="scope.height"
+                empty-text="暂无数据">
+                <el-table-column label="姓名" prop="name"></el-table-column>
+                <el-table-column label="年龄" prop="name"></el-table-column>
+            </el-table>
+        </template>
+    </FlexTable>
+</div>
